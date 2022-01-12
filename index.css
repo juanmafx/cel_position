@@ -1,0 +1,19 @@
+.true{
+    background-color: green;
+}
+
+.false{
+    background-color:red;
+}
+
+.giro{
+    height: 600px;
+    width: 600px;
+    background: gold;
+}
+
+.getEstado{
+    height: 200px;
+    width: 600px;
+    background: rgb(0, 38, 255);
+}
