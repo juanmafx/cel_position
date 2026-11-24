@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'">
+    <meta name="referrer" content="no-referrer">
+    <title>cel_position: device orientation viewer</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <main class="dashboard">
+      <h1>Device orientation viewer</h1>
+      <p id="status" class="status" role="status" aria-live="polite">Starting.</p>
+      <button id="enable-sensors" type="button" hidden>Enable sensors</button>
+      <section aria-labelledby="gyroscope-heading">
+        <h2 id="gyroscope-heading">Gyroscope</h2>
+        <p id="gyroscope" class="indicator" data-detected="false">Not detected</p>
+      </section>
+      <section aria-labelledby="orientation-heading">
+        <h2 id="orientation-heading">Orientation</h2>
+        <dl class="readings">
+          <div><dt>Absolute</dt><dd id="absolute">n/a</dd></div>
+          <div><dt>Alpha (z axis)</dt><dd id="alpha">n/a</dd></div>
+          <div><dt>Beta (x axis)</dt><dd id="beta">n/a</dd></div>
+          <div><dt>Gamma (y axis)</dt><dd id="gamma">n/a</dd></div>
+          <div><dt>Tilt</dt><dd id="tilt">unknown</dd></div>
+        </dl>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+	<testsuite name="application" time="0.245703" disabled="0" errors="0" tests="15" failures="0" skipped="0" timestamp="2026-11-24T12:16:45.756Z" hostname="redacted">
+		<testcase name="reports an unsupported browser" time="0.089436" classname="application" file="./tests/integration/app.test.js"/>
+		<testcase name="reports an insecure context" time="0.011005" classname="application" file="./tests/integration/app.test.js"/>
+		<testcase name="renders orientation readings" time="0.011311" classname="application" file="./tests/integration/app.test.js"/>
+		<testcase name="coalesces bursts of events into one frame using the latest reading" time="0.010290" classname="application" file="./tests/integration/app.test.js"/>
+		<testcase name="marks the gyroscope as detected on non-zero rotation" time="0.011143" classname="application" file="./tests/integration/app.test.js"/>
+		<testcase name="survives motion events without rotation data" time="0.011422" classname="application" file="./tests/integration/app.test.js"/>
+		<testcase name="renders hostile event values as inert text" time="0.012070" classname="application" file="./tests/integration/app.test.js"/>
+		<testcase name="waits for a user gesture before requesting permission" time="0.016172" classname="application" file="./tests/integration/app.test.js"/>
+		<testcase name="reports a denied permission and does not listen" time="0.012810" classname="application" file="./tests/integration/app.test.js"/>
+		<testcase name="requests permission once when the button is clicked repeatedly" time="0.016448" classname="application" file="./tests/integration/app.test.js"/>
+		<testcase name="does not start listening when stopped during a pending permission request" time="0.009699" classname="application" file="./tests/integration/app.test.js"/>
+		<testcase name="wraps a heading that rounds to 360 degrees" time="0.006481" classname="application" file="./tests/integration/app.test.js"/>
+		<testcase name="labels a device lying face down" time="0.007215" classname="application" file="./tests/integration/app.test.js"/>
+		<testcase name="stops listening after stop is called" time="0.006679" classname="application" file="./tests/integration/app.test.js"/>
+		<testcase name="ships a restrictive content security policy and no inline code" time="0.011588" classname="application" file="./tests/integration/app.test.js"/>
+	</testsuite>
+	<testsuite name="development server" time="0.051773" disabled="0" errors="0" tests="21" failures="0" skipped="0" timestamp="2026-11-24T12:16:45.966Z" hostname="redacted">
+		<testcase name="serves the index document with security headers" time="0.013870" classname="development server" file="./tests/integration/dev-server.test.js"/>
+		<testcase name="serves JavaScript with the correct media type" time="0.002412" classname="development server" file="./tests/integration/dev-server.test.js"/>
+		<testcase name="blocks traversal through /../outside.js" time="0.001482" classname="development server" file="./tests/integration/dev-server.test.js"/>
+		<testcase name="blocks traversal through /..%2foutside.js" time="0.001494" classname="development server" file="./tests/integration/dev-server.test.js"/>
+		<testcase name="blocks traversal through /%2e%2e/outside.js" time="0.001540" classname="development server" file="./tests/integration/dev-server.test.js"/>
+		<testcase name="blocks symlinks that escape the root" time="0.001368" classname="development server" file="./tests/integration/dev-server.test.js"/>
+		<testcase name="blocks file types outside the allowlist" time="0.002139" classname="development server" file="./tests/integration/dev-server.test.js"/>
+		<testcase name="rejects malformed encoding" time="0.001359" classname="development server" file="./tests/integration/dev-server.test.js"/>
+		<testcase name="rejects null bytes" time="0.001464" classname="development server" file="./tests/integration/dev-server.test.js"/>
+		<testcase name="rejects write methods" time="0.001353" classname="development server" file="./tests/integration/dev-server.test.js"/>
+		<testcase name="rejects the foreign Host header attacker.example" time="0.001882" classname="development server" file="./tests/integration/dev-server.test.js"/>
+		<testcase name="rejects the foreign Host header attacker.example:8080" time="0.000789" classname="development server" file="./tests/integration/dev-server.test.js"/>
+		<testcase name="rejects the foreign Host header localhost@attacker.example" time="0.000729" classname="development server" file="./tests/integration/dev-server.test.js"/>
+		<testcase name="rejects the foreign Host header localhost.attacker.example" time="0.000961" classname="development server" file="./tests/integration/dev-server.test.js"/>
+		<testcase name="accepts the loopback Host header localhost:8080" time="0.001426" classname="development server" file="./tests/integration/dev-server.test.js"/>
+		<testcase name="accepts the loopback Host header LOCALHOST" time="0.001185" classname="development server" file="./tests/integration/dev-server.test.js"/>
+		<testcase name="accepts the loopback Host header 127.0.0.1:8080" time="0.001760" classname="development server" file="./tests/integration/dev-server.test.js"/>
+		<testcase name="accepts the loopback Host header [::1]:8080" time="0.001216" classname="development server" file="./tests/integration/dev-server.test.js"/>
+		<testcase name="allows an explicit bind address as a Host" time="0.000154" classname="development server" file="./tests/integration/dev-server.test.js"/>
+		<testcase name="does not treat a wildcard bind address as a valid Host" time="0.000072" classname="development server" file="./tests/integration/dev-server.test.js"/>
+		<testcase name="answers HEAD without a body" time="0.001488" classname="development server" file="./tests/integration/dev-server.test.js"/>
+	</testsuite>
+	<testsuite name="optional database schema" time="0.016577" disabled="0" errors="0" tests="15" failures="0" skipped="0" timestamp="2026-11-24T12:16:46.001Z" hostname="redacted">
+		<testcase name="creates both tables" time="0.002294" classname="optional database schema" file="./tests/integration/schema.test.js"/>
+		<testcase name="is safe to apply twice" time="0.000674" classname="optional database schema" file="./tests/integration/schema.test.js"/>
+		<testcase name="stores a valid sample" time="0.000824" classname="optional database schema" file="./tests/integration/schema.test.js"/>
+		<testcase name="allows null angles from sensors that report none" time="0.000834" classname="optional database schema" file="./tests/integration/schema.test.js"/>
+		<testcase name="rejects out-of-range angles" time="0.001293" classname="optional database schema" file="./tests/integration/schema.test.js"/>
+		<testcase name="rejects samples for unknown sessions" time="0.001426" classname="optional database schema" file="./tests/integration/schema.test.js"/>
+		<testcase name="rejects duplicate offsets within a session" time="0.000759" classname="optional database schema" file="./tests/integration/schema.test.js"/>
+		<testcase name="rejects a session that ends before it starts" time="0.000532" classname="optional database schema" file="./tests/integration/schema.test.js"/>
+		<testcase name="rejects the non-canonical timestamp 2026-13-01T00:00:00Z" time="0.000514" classname="optional database schema" file="./tests/integration/schema.test.js"/>
+		<testcase name="rejects the non-canonical timestamp 2026-02-30T00:00:00Z" time="0.002172" classname="optional database schema" file="./tests/integration/schema.test.js"/>
+		<testcase name="rejects the non-canonical timestamp 2026-01-01Tnot-a-timeZ" time="0.000512" classname="optional database schema" file="./tests/integration/schema.test.js"/>
+		<testcase name="rejects the non-canonical timestamp 2026-01-01T00:00:00.500Z" time="0.000447" classname="optional database schema" file="./tests/integration/schema.test.js"/>
+		<testcase name="rejects a non-canonical end timestamp" time="0.000580" classname="optional database schema" file="./tests/integration/schema.test.js"/>
+		<testcase name="accepts a session ending one second later" time="0.000709" classname="optional database schema" file="./tests/integration/schema.test.js"/>
+		<testcase name="cascades session deletion to samples" time="0.000692" classname="optional database schema" file="./tests/integration/schema.test.js"/>
+	</testsuite>
+	<testsuite name="normalizeOrientation" time="0.006758" disabled="0" errors="0" tests="12" failures="0" skipped="0" timestamp="2026-11-24T12:16:46.012Z" hostname="redacted">
+		<testcase name="keeps angles inside their specified ranges" time="0.001624" classname="normalizeOrientation" file="./tests/unit/orientation.test.js"/>
+		<testcase name="accepts the inclusive range boundaries" time="0.000178" classname="normalizeOrientation" file="./tests/unit/orientation.test.js"/>
+		<testcase name="rejects alpha value null" time="0.000230" classname="normalizeOrientation" file="./tests/unit/orientation.test.js"/>
+		<testcase name="rejects alpha value undefined" time="0.000174" classname="normalizeOrientation" file="./tests/unit/orientation.test.js"/>
+		<testcase name="rejects alpha value NaN" time="0.000141" classname="normalizeOrientation" file="./tests/unit/orientation.test.js"/>
+		<testcase name="rejects alpha value Infinity" time="0.000097" classname="normalizeOrientation" file="./tests/unit/orientation.test.js"/>
+		<testcase name="rejects alpha value 12" time="0.000167" classname="normalizeOrientation" file="./tests/unit/orientation.test.js"/>
+		<testcase name="rejects alpha value 361" time="0.000316" classname="normalizeOrientation" file="./tests/unit/orientation.test.js"/>
+		<testcase name="rejects alpha value -1" time="0.000139" classname="normalizeOrientation" file="./tests/unit/orientation.test.js"/>
+		<testcase name="rejects beta and gamma outside their ranges" time="0.000607" classname="normalizeOrientation" file="./tests/unit/orientation.test.js"/>
+		<testcase name="treats only a strict true as absolute" time="0.000157" classname="normalizeOrientation" file="./tests/unit/orientation.test.js"/>
+		<testcase name="returns an empty reading for a missing event" time="0.000113" classname="normalizeOrientation" file="./tests/unit/orientation.test.js"/>
+	</testsuite>
+	<testsuite name="hasRotationData" time="0.001454" disabled="0" errors="0" tests="8" failures="0" skipped="0" timestamp="2026-11-24T12:16:46.017Z" hostname="redacted">
+		<testcase name="detects any non-zero axis" time="0.000294" classname="hasRotationData" file="./tests/unit/orientation.test.js"/>
+		<testcase name="is false for zero rates" time="0.000141" classname="hasRotationData" file="./tests/unit/orientation.test.js"/>
+		<testcase name="does not throw when rotationRate is null" time="0.000287" classname="hasRotationData" file="./tests/unit/orientation.test.js"/>
+		<testcase name="ignores non-numeric rate 1" time="0.000124" classname="hasRotationData" file="./tests/unit/orientation.test.js"/>
+		<testcase name="ignores non-numeric rate NaN" time="0.000104" classname="hasRotationData" file="./tests/unit/orientation.test.js"/>
+		<testcase name="ignores non-numeric rate Infinity" time="0.000048" classname="hasRotationData" file="./tests/unit/orientation.test.js"/>
+		<testcase name="ignores non-numeric rate true" time="0.000044" classname="hasRotationData" file="./tests/unit/orientation.test.js"/>
+		<testcase name="ignores non-numeric rate [object Object]" time="0.000041" classname="hasRotationData" file="./tests/unit/orientation.test.js"/>
+	</testsuite>
+	<testsuite name="formatAngle" time="0.000643" disabled="0" errors="0" tests="4" failures="0" skipped="0" timestamp="2026-11-24T12:16:46.019Z" hostname="redacted">
+		<testcase name="formats to one decimal place with a degree sign" time="0.000192" classname="formatAngle" file="./tests/unit/orientation.test.js"/>
+		<testcase name="keeps zero as a real value" time="0.000097" classname="formatAngle" file="./tests/unit/orientation.test.js"/>
+		<testcase name="renders missing values as n/a" time="0.000091" classname="formatAngle" file="./tests/unit/orientation.test.js"/>
+		<testcase name="does not render negative zero" time="0.000069" classname="formatAngle" file="./tests/unit/orientation.test.js"/>
+	</testsuite>
+	<testsuite name="formatHeading" time="0.000828" disabled="0" errors="0" tests="5" failures="0" skipped="0" timestamp="2026-11-24T12:16:46.019Z" hostname="redacted">
+		<testcase name="formats heading 12.34 as 12.3°" time="0.000355" classname="formatHeading" file="./tests/unit/orientation.test.js"/>
+		<testcase name="formats heading 359.94 as 359.9°" time="0.000068" classname="formatHeading" file="./tests/unit/orientation.test.js"/>
+		<testcase name="formats heading 359.97 as 0.0°" time="0.000063" classname="formatHeading" file="./tests/unit/orientation.test.js"/>
+		<testcase name="formats heading 360 as 0.0°" time="0.000067" classname="formatHeading" file="./tests/unit/orientation.test.js"/>
+		<testcase name="formats heading null as n/a" time="0.000062" classname="formatHeading" file="./tests/unit/orientation.test.js"/>
+	</testsuite>
+	<testsuite name="describeTilt" time="0.001469" disabled="0" errors="0" tests="11" failures="0" skipped="0" timestamp="2026-11-24T12:16:46.018Z" hostname="redacted">
+		<testcase name="classifies beta 2 gamma -3 as flat" time="0.000311" classname="describeTilt" file="./tests/unit/orientation.test.js"/>
+		<testcase name="classifies beta 45 gamma 10 as top raised" time="0.000078" classname="describeTilt" file="./tests/unit/orientation.test.js"/>
+		<testcase name="classifies beta -45 gamma 10 as top lowered" time="0.000072" classname="describeTilt" file="./tests/unit/orientation.test.js"/>
+		<testcase name="classifies beta 10 gamma 45 as right side lowered" time="0.000078" classname="describeTilt" file="./tests/unit/orientation.test.js"/>
+		<testcase name="classifies beta 10 gamma -45 as left side lowered" time="0.000223" classname="describeTilt" file="./tests/unit/orientation.test.js"/>
+		<testcase name="classifies beta null gamma 10 as unknown" time="0.000050" classname="describeTilt" file="./tests/unit/orientation.test.js"/>
+		<testcase name="classifies beta 10 gamma null as unknown" time="0.000043" classname="describeTilt" file="./tests/unit/orientation.test.js"/>
+		<testcase name="classifies beta 179 gamma 1 as face down" time="0.000073" classname="describeTilt" file="./tests/unit/orientation.test.js"/>
+		<testcase name="classifies beta -175 gamma -5 as face down" time="0.000069" classname="describeTilt" file="./tests/unit/orientation.test.js"/>
+		<testcase name="classifies beta 165 gamma 0 as top raised" time="0.000045" classname="describeTilt" file="./tests/unit/orientation.test.js"/>
+		<testcase name="classifies beta 170 gamma 40 as top raised" time="0.000041" classname="describeTilt" file="./tests/unit/orientation.test.js"/>
+	</testsuite>
+	<testsuite name="getSensorAvailability" time="0.004690" disabled="0" errors="0" tests="4" failures="0" skipped="0" timestamp="2026-11-24T12:16:46.016Z" hostname="redacted">
+		<testcase name="reports unsupported without the event constructor" time="0.002059" classname="getSensorAvailability" file="./tests/unit/permission.test.js"/>
+		<testcase name="reports insecure outside a secure context" time="0.000259" classname="getSensorAvailability" file="./tests/unit/permission.test.js"/>
+		<testcase name="reports ready when no permission API exists" time="0.000204" classname="getSensorAvailability" file="./tests/unit/permission.test.js"/>
+		<testcase name="reports permission when the permission API exists" time="0.000205" classname="getSensorAvailability" file="./tests/unit/permission.test.js"/>
+	</testsuite>
+	<testsuite name="requestSensorAccess" time="0.004499" disabled="0" errors="0" tests="6" failures="0" skipped="0" timestamp="2026-11-24T12:16:46.016Z" hostname="redacted">
+		<testcase name="grants when both sensors are granted" time="0.000534" classname="requestSensorAccess" file="./tests/unit/permission.test.js"/>
+		<testcase name="issues both requests synchronously to stay inside the user gesture" time="0.001259" classname="requestSensorAccess" file="./tests/unit/permission.test.js"/>
+		<testcase name="grants when the motion API has no permission gate" time="0.000414" classname="requestSensorAccess" file="./tests/unit/permission.test.js"/>
+		<testcase name="denies when orientation is denied" time="0.000345" classname="requestSensorAccess" file="./tests/unit/permission.test.js"/>
+		<testcase name="denies when motion is denied" time="0.000421" classname="requestSensorAccess" file="./tests/unit/permission.test.js"/>
+		<testcase name="reports failure when the request throws" time="0.000487" classname="requestSensorAccess" file="./tests/unit/permission.test.js"/>
+	</testsuite>
+	<!-- tests 101 -->
+	<!-- suites 10 -->
+	<!-- pass 101 -->
+	<!-- fail 0 -->
+	<!-- cancelled 0 -->
+	<!-- skipped 0 -->
+	<!-- todo 0 -->
+	<!-- duration_ms 663.028222 -->
+</testsuites>

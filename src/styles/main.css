@@ -1,0 +1,76 @@
+:root {
+  color-scheme: light dark;
+  --surface: #ffffff;
+  --text: #16202a;
+  --muted: #55636f;
+  --border: #d5dbe1;
+  --positive: #116b3a;
+  --negative: #a32020;
+  font-family: system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #1b232b;
+    --text: #edf1f5;
+    --muted: #a9b5c0;
+    --border: #36424d;
+    --positive: #58d68d;
+    --negative: #ff8a80;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.dashboard {
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.status {
+  color: var(--muted);
+}
+
+button {
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.indicator[data-detected='true'] {
+  color: var(--positive);
+  font-weight: 600;
+}
+
+.indicator[data-detected='false'] {
+  color: var(--negative);
+  font-weight: 600;
+}
+
+.readings {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.readings > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.readings dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
