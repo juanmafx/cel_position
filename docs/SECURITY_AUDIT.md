@@ -34,12 +34,17 @@ This was a manual review supported by pattern searches, `gitleaks`, `npm audit`,
 | Cryptography | Not applicable: the code performs no cryptographic operations |
 | CI action pins | Resolve to upstream tags `actions/checkout` v7.0.1 and `actions/setup-node` v7.1.0 |
 
-The three PDFs contain images rather than extractable text, so the automated patterns could not inspect their contents.
+The three saved third-party PDFs contained images rather than extractable text, so the automated patterns could not inspect their contents. They have since been removed.
+
+## Resolved after the audit
+
+| Item | Severity | Status |
+| --- | --- | --- |
+| Third-party PDFs with unverified redistribution rights were in the tree and in history. One stated that it was not for release, publication, or distribution in any jurisdiction where that would be unlawful. | Legal or compliance | Resolved: removed from the tree in 1.0.0 and from the history by the 2026-11-24 history rewrite. Copies published before then may persist elsewhere. |
 
 ## Open items
 
 | Item | Severity | Status |
 | --- | --- | --- |
-| Third-party PDFs with unverified redistribution rights remain in the tree and in history. One states that it is not for release, publication, or distribution in any jurisdiction where that would be unlawful. | Legal or compliance | Requires an owner decision |
 | `frame-ancestors` and `Permissions-Policy` require response headers, which depend on the chosen static host. | Low | Documented in `docs/ARCHITECTURE.md` |
 | Behavior on physical devices has not been verified. Headless Chrome 157 with emulated orientation and motion sensors rendered readings and detected the gyroscope with no console errors under the CSP. | Informational | Requires manual testing |

@@ -1,6 +1,6 @@
 {
   "name": "cel-position",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Browser-based viewer for live device orientation and gyroscope readings.",
   "private": true,
   "license": "UNLICENSED",

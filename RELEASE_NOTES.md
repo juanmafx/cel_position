@@ -1,21 +1,12 @@
-# Release Notes: v1.0.0
+# Release Notes: v1.0.1
 
-**Status:** prepared, not yet tagged or published.
+Released on 2026-11-24.
 
-`cel_position` began in 2022 as a device orientation experiment and was modernized in 2026 into a tested, client-only application.
-
-## Highlights
-
-- Live alpha, beta, gamma, and tilt readings with one render per animation frame.
-- Gyroscope detection and a user-gesture permission flow.
-- No runtime dependencies and a strict Content Security Policy.
-- Automated unit and integration tests, with results in `reports/tests/`.
-
-## Breaking changes
-
-The application now lives in `src/`. Any deployment that served the repository root must publish `src/` instead.
+This is a documentation-only patch release. It corrects the release notes, security audit and deployment guide, which still described the removed third-party PDFs as present in the repository and 1.0.0 as unpublished. There is no change in code behaviour.
 
 ## Upgrade
+
+No migration is needed from 1.0.0. When upgrading from the unversioned 2022 code, note that the application now lives in `src/`, so any deployment that served the repository root must publish `src/` instead.
 
 ```bash
 nvm use
@@ -27,5 +18,4 @@ npm start
 ## Known limitations
 
 - Automated tests simulate sensor events, and a manual check used emulated sensors in headless Chrome. Physical devices have not been verified.
-- Saved third-party PDFs remain in the repository pending an owner decision. The campusMVP article is in Spanish, and the other two contain incidental Spanish text. All three are preserved unmodified.
 - No open-source license has been declared.

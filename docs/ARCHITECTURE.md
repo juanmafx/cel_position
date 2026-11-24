@@ -63,7 +63,7 @@ db/
 
 ## Recommended deployment
 
-Publish only the `src/` directory to a static HTTPS host. Do not publish the repository root, because `docs/references/` contains third-party documents. Configure these response headers where the host supports them:
+Publish only the `src/` directory to a static HTTPS host. Do not publish the repository root, because it also holds tests, tooling and documentation that are not part of the application. Configure these response headers where the host supports them:
 
 ```text
 Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'

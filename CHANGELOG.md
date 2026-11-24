@@ -2,7 +2,13 @@
 
 This project follows [Semantic Versioning](https://semver.org/) and the [Keep a Changelog](https://keepachangelog.com/) format.
 
-## [1.0.0] - Unreleased
+## [1.0.1] - 2026-11-24
+
+### Changed
+
+- Corrected the release notes, security audit and deployment guide, which still described the removed third-party PDFs as present and 1.0.0 as unpublished. Documentation only, no change in code behaviour.
+
+## [1.0.0] - 2026-11-24
 
 First versioned release. The original 2022 code carried no version number.
 
