@@ -6,7 +6,7 @@ A browser application with no runtime dependencies that shows a phone's live ori
 
 ## Purpose
 
-`cel_position` answers one practical question: what do the browser's motion sensors report on this device, right now? It reads the standard `deviceorientation` and `devicemotion` events and presents them in a form that is useful when checking a device or learning the API.
+`phone-orientation-web` answers one practical question: what do the browser's motion sensors report on this device, right now? It reads the standard `deviceorientation` and `devicemotion` events and presents them in a form that is useful when checking a device or learning the API.
 
 ## Why this project exists
 
