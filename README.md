@@ -1,4 +1,4 @@
-# cel_position
+# phone-orientation-web
 
 A browser application with no runtime dependencies that shows a phone's live orientation angles and whether it reports gyroscope rotation.
 
